@@ -14,6 +14,12 @@ services:
                         - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1
                         - CELERY_BROKER=redis://redis:6379/0/
                         - CELERY_BACKEND=redis://redis:6379/0/
+                        - SQL_ENGINE=django.db.backends.postgresql
+                        - SQL_DATABASE=postgres
+                        - SQL_USER=postgres
+                        - SQL_PASSWORD=postgres
+                        - SQL_HOST=pgdb
+                        - SQL_PORT=5432
                 depends_on:
                         - pgdb
                         - redis
